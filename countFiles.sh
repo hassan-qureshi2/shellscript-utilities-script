@@ -13,6 +13,7 @@ function count_files {
 }
 
 # initialize the count array
+
 declare -A count
 
 # call the count_files function on the current directory
