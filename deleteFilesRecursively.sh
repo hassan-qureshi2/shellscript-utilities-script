@@ -13,3 +13,6 @@ file_ext="$1"
 find . -type f -name "*.$file_ext" -delete
 
 echo "Deleted all .$file_ext files in the current directory and its subdirectories."
+
+
+
