@@ -10,6 +10,7 @@ fi
 file_ext="$1"
 
 # delete all files with the specified extension
+
 find . -type f -name "*.$file_ext" -delete
 
 echo "Deleted all .$file_ext files in the current directory and its subdirectories."
