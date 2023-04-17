@@ -19,6 +19,7 @@ declare -A count
 
 
 # call the count_files function on the current directory
+# call the count_files function on the current directory
 count_files "."
 
 # print the results
