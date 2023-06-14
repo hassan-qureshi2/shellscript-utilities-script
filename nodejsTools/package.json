@@ -1,0 +1,21 @@
+{
+    "dependencies": {
+        "chalk": "^5.2.0",
+        "clipboardy": "^3.0.0",
+        "commander": "^10.0.1"
+    },
+    "devDependencies": {
+        "eslint": "^8.42.0",
+        "eslint-plugin-react": "^7.32.2"
+    },
+    "name": "nodejstools",
+    "version": "1.0.0",
+    "main": "index.js",
+    "type": "module",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "author": "",
+    "license": "ISC",
+    "description": ""
+}

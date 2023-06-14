@@ -5,7 +5,7 @@ while getopts ":l:" opt; do
   case $opt in
     l) length="$OPTARG"
     ;;
-    \?) echo "Invalid option -$OPTARG" >&2
+    \?) echo "Invalid option -$OPTARG" >&2 
     ;;
   esac
 done
