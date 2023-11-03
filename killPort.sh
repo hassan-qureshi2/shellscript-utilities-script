@@ -1,19 +1,23 @@
 #!/bin/bash
-
+GREEN="\e[32m"
+YELLOW="\e[33m"
+RED="\e[31m"
+RESET="\e[0m"
+# Check if a port number was provided as an argument
 if [ $# -ne 1 ]; then
-  echo "Usage: $0 <port>"
-  exit 1
+        echo -e "${RED} Port number not passed.${RESET}"
+    exit 1
 fi
 
-port=$1
+# Get the port number from the command line argument
+port="$1"
 
-# Find the process using the specified port
-pid=$(sudo lsof -ti :$port)
-
-if [ -z "$pid" ]; then
-  echo "No process found using port $port"
+# Check if the port is in use
+if lsof -i :"$port" > /dev/null 2>&1; then
+    # Kill the process using the port
+    sudo fuser -k "$port/tcp"
+    echo "Process using port $port has been killed."
+    echo -e "${RED} Process using port $port has been killed.${RESET}"
 else
-  # Kill the process
-  sudo kill $pid
-  echo "Process with PID $pid killed"
+    echo -e "${RED} Port $port is not in use.${RESET}"
 fi

@@ -27,3 +27,4 @@ echo "Checkout ID: $checkout_id"
 echo -n "$checkout_id" | xsel -i -b
 echo "Checkout ID copied to clipboard."
 
+exit 0
